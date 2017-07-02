@@ -1,5 +1,6 @@
 from box import Box
 from camera import Camera
+from cylinder import Cylinder
 from include import Include
 from light_source import LightSource
 from pigment import Pigment

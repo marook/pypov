@@ -29,4 +29,9 @@ plane.pigment = pypov.Pigment()
 plane.pigment.color = 'Blue'
 scene.elements.append(plane)
 
+cylinder = pypov.Cylinder((-0.6, 0, 0), (-0.6, 0.2, 0), 0.2)
+cylinder.pigment = pypov.Pigment()
+cylinder.pigment.color = 'Yellow'
+scene.elements.append(cylinder)
+
 print scene.toPovray()
