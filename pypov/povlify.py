@@ -5,8 +5,8 @@ def povlify(obj):
         return obj
     elif(isinstance(obj, float)):
         return str(obj)
-    elif(hasattr(obj, 'povlify')):
-        return obj.povlify
+    elif(hasattr(obj, 'toPovray')):
+        return obj.toPovray()
     elif(is_element(obj)):
         return elementify(obj)
     else:
