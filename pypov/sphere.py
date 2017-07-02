@@ -1,3 +1,5 @@
+import props
+
 class Sphere(object):
     POV_NAME = 'sphere'
     
@@ -6,11 +8,9 @@ class Sphere(object):
         'radius',
     ]
 
-    POV_MODIFIERS = [
-        'pigment',
-    ]
+    POV_MODIFIERS = props.OBJECT_MODIFIERS
     
     def __init__(self, center, radius):
         self.center = center
         self.radius = radius
-        self.pigment = None
+        props.apply_pov_properties(self)

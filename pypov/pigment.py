@@ -1,15 +1,16 @@
 import props
 
-class Camera(object):
-    POV_NAME = 'camera'
+class Pigment(object):
+    POV_NAME = ''
     
     POV_ARGS = [
-        'camera_type',
+        'pigment_identifier',
+        'pigment_type',
     ]
-    
+
     POV_MODIFIERS = [
-        'location',
-        'look_at',
+        'color',
+        'quick_color',
     ]
     
     def __init__(self):

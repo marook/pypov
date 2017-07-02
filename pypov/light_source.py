@@ -1,3 +1,5 @@
+import props
+
 class LightSource(object):
     POV_NAME = 'light_source'
     
@@ -12,5 +14,4 @@ class LightSource(object):
     ]
     
     def __init__(self):
-        self.location = None
-        self.color = None
+        props.apply_pov_properties(self)
