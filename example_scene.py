@@ -2,9 +2,19 @@ import pypov
 
 scene = pypov.Scene()
 
+scene.elements.append(pypov.Include('colors.inc'))
+
 cam = pypov.Camera()
-cam.location = pypov.V(0, 1, -1)
-cam.look_at = pypov.V(0, 0, 0)
+cam.location = (0, 1, -1)
+cam.look_at = (0, 0, 0)
 scene.elements.append(cam)
 
-print scene.pov
+light = pypov.LightSource()
+light.location = (-1, 1, -1)
+light.color = 'Red'
+scene.elements.append(light)
+
+sphere = pypov.Sphere((0, 0, 0), 0.2)
+scene.elements.append(sphere)
+
+print scene.povlify
