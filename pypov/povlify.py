@@ -3,7 +3,7 @@ def povlify(obj):
         return vectorify(obj)
     elif(isinstance(obj, str)):
         return obj
-    elif(isinstance(obj, float)):
+    elif(isinstance(obj, float) or isinstance(obj, int)):
         return str(obj)
     elif(hasattr(obj, 'toPovray')):
         return obj.toPovray()

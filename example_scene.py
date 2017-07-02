@@ -24,4 +24,9 @@ box.pigment = pypov.Pigment()
 box.pigment.color = 'Green'
 scene.elements.append(box)
 
+plane = pypov.Plane('y', 0)
+plane.pigment = pypov.Pigment()
+plane.pigment.color = 'Blue'
+scene.elements.append(plane)
+
 print scene.toPovray()
