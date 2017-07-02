@@ -7,3 +7,4 @@ from pigment import Pigment
 from plane import Plane
 from scene import Scene
 from sphere import Sphere
+from union import Union

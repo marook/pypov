@@ -1,8 +1,12 @@
 def apply_pov_properties(obj):
     t = type(obj)
-    for key in t.POV_ARGS + t.POV_MODIFIERS:
+    keys = (t.POV_ARGS if hasattr(t, 'POV_ARGS') else []) + t.POV_MODIFIERS
+    for key in keys:
         if(not hasattr(obj, key)):
             setattr(obj, key, None)
+    if(hasattr(t, 'POV_MANY_ARG')):
+        if(not hasattr(obj, t.POV_MANY_ARG)):
+            setattr(obj, t.POV_MANY_ARG, [])
 
 OBJECT_MODIFIERS = [
     'pigment',

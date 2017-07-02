@@ -34,4 +34,11 @@ cylinder.pigment = pypov.Pigment()
 cylinder.pigment.color = 'Yellow'
 scene.elements.append(cylinder)
 
+union = pypov.Union()
+union.objects.append(pypov.Sphere((0, 0.5, 0), 0.2))
+union.objects.append(pypov.Sphere((0.4, 0.5, 0), 0.2))
+union.pigment = pypov.Pigment()
+union.pigment.color = 'Cyan'
+scene.elements.append(union)
+
 print scene.toPovray()

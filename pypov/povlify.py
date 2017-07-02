@@ -26,6 +26,9 @@ def elementify(e):
     ]
     if(hasattr(t, 'POV_ARGS')):
         lines.append(', '.join([povlify(getattr(e, key)) for key in t.POV_ARGS if not getattr(e, key) is None]))
+    if(hasattr(t, 'POV_MANY_ARG')):
+        for v in getattr(e, t.POV_MANY_ARG):
+            lines.append(povlify(v))
     if(hasattr(t, 'POV_EXTRA_ARGS_SEPARATOR')):
         lines.append(',')
     if(hasattr(t, 'POV_MODIFIERS')):
