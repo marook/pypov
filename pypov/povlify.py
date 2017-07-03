@@ -34,7 +34,9 @@ def elementify(e):
     if(hasattr(t, 'POV_MODIFIERS')):
         for key in t.POV_MODIFIERS:
             value = getattr(e, key)
-            if(not value is None):
+            if(value is True):
+                lines.append('{}'.format(key))
+            elif(not value is None):
                 lines.append('{} {}'.format(key, povlify(value)))
     lines.append('}')
     return '\n'.join(lines)

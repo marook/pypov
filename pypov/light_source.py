@@ -11,6 +11,8 @@ class LightSource(object):
     
     POV_MODIFIERS = [
         'color',
+        'point_at',
+        'parallel',
     ]
     
     def __init__(self):

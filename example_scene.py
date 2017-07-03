@@ -10,7 +10,9 @@ cam.look_at = (0, 0, 0)
 scene.elements.append(cam)
 
 light = pypov.LightSource()
+light.parallel = True
 light.location = (-1, 1, -1)
+light.point_at = (0, 0, 0)
 light.color = 'White'
 scene.elements.append(light)
 

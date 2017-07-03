@@ -2,7 +2,9 @@ from box import Box
 from camera import Camera
 from cylinder import Cylinder
 from include import Include
+from intersection import Intersection
 from light_source import LightSource
+from object import Object
 from pigment import Pigment
 from plane import Plane
 from scene import Scene

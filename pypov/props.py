@@ -8,9 +8,16 @@ def apply_pov_properties(obj):
         if(not hasattr(obj, t.POV_MANY_ARG)):
             setattr(obj, t.POV_MANY_ARG, [])
 
+TRANSPOSE_MODIFIERS = [
+    'translate',
+    'scale',
+    'rotate',
+]
+
 OBJECT_MODIFIERS = [
     'pigment',
     'texture',
     'materiat',
     'normal',
-]
+    'finish',
+] + TRANSPOSE_MODIFIERS

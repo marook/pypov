@@ -10,6 +10,9 @@ class Camera(object):
     POV_MODIFIERS = [
         'location',
         'look_at',
+        'right',
+        'up',
+        'translate',
     ]
     
     def __init__(self):
