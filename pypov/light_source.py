@@ -15,5 +15,6 @@ class LightSource(object):
         'parallel',
     ]
     
-    def __init__(self):
+    def __init__(self, location):
+        self.location = location
         props.apply_pov_properties(self)
